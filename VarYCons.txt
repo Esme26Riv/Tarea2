@@ -1,0 +1,85 @@
+ /* -------- Tarea variables y constantes. Implícitas y explícitas-------- */
+    
+    println("Variables Implicitas")
+
+    println("\nVariable implicita 1: entero")
+    val x = 5
+    println("Valor de x: $x")
+
+    println("Variable implicita 2: cadena")
+    val nombre = "Juan"
+    println("Nombre: $nombre")
+
+    println("Variable implicita 3: flotante")
+    val pi = 3.1416f
+    println("Valor de pi: $pi")
+
+    println("Variable implicita 4: booleano")
+    val Admin = true
+    println("Es admin: $Admin")
+
+    println("Variable implicita 5: lista")
+    val frutas = listOf("Manzana", "Platano", "Naranja")
+    println("Lista de Frutas: $frutas")
+
+
+    println("\nVariables Explicitas")
+
+    println("\nVariable explicita 1: entero")
+    val xx: Int = 5
+    println("Valor de x: $xx")
+
+    println("Variable explicita 2: cadena")
+    val Apellido: String = "Mata"
+    println("Nombre: $Apellido")
+
+    println("Variable explicita 3: flotante")
+    val p: Float = 3.1416f
+    println("Valor de pi: $p")
+
+    println("Variable explicita 4: booleano")
+    val esAdmin: Boolean = true
+    println("Es admin: $esAdmin")
+
+    println("Variable explicita 5: lista")
+    val LisFrutas: List<String> = listOf("Manzana", "Platano", "Naranja")
+    println("Lista de Frutas: $LisFrutas")
+
+    /* -------- Constantes implícitas -------- */
+
+    println("\nConstantes Implicitas")
+
+    val c1 = 100   // constante implícita
+    println("\nConstante implicita 1: $c1")
+
+    val c2 = "Kotlin"  // constante implícita
+    println("Constante implicita 2: $c2")
+
+    val c3 = 3.14f  // constante implícita
+    println("Constante implicita 3: $c3")
+
+    val c4 = true  // constante implícita
+    println("Constante implicita 4: $c4")
+
+    val c5 = listOf("Rojo", "Azul", "Verde")  // constante implícita
+    println("Constante implicita 5: $c5")
+    
+    /* -------- Constantes explícitas -------- */
+
+    println("\nConstantes Explicitas")
+
+    val constant1: Int = 100   // constante explícita
+    println("\nConstante explicita 1: $constant1")
+
+    val constant2: String = "Kotlin"  // constante explícita
+    println("Constante explicita 2: $constant2")
+
+    val constant3: Float = 3.14f  // constante explícita
+    println("Constante explicita 3: $constant3")
+
+    val constant4: Boolean = true  // constante explícita
+    println("Constante explicita 4: $constant4")
+
+    val constant5: List<String> = listOf("Rojo", "Azul", "Verde")  // constante explícita
+    println("Constante explicita 5: $constant5")
+}
