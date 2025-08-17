@@ -1,0 +1,67 @@
+fun main() {
+    // Generamos un número aleatorio entre 0 y 100
+    val numeroAleatorio = (0..100).random()
+ 
+    // Inicializamos el contador de intentos
+    var intentos = 0
+ 
+    // Instrucciones del juego
+    println("¡Bienvenido al juego de adivinanza!")
+    println("Estoy pensando en un número entre 0 y 100. ¿Puedes adivinarlo?")
+ 
+    // Bucle de juego
+    while (true) {
+        // Pedimos al usuario que ingrese un número
+        val respuesta = validar_numero_de_entrada()
+ 
+        // Incrementamos el contador de intentos
+        intentos++
+ 
+        // Comprobamos si el número ingresado es mayor, menor o igual al número aleatorio
+        when {
+            respuesta < numeroAleatorio -> {
+                println("El número es mayor. Intentos: $intentos")
+            }
+            respuesta > numeroAleatorio -> {
+                println("El número es menor. Intentos: $intentos")
+            }
+            else -> {
+                println("¡Felicidades! Adivinaste el número en $intentos intentos.")
+                break // Salimos del bucle cuando el usuario adivina el número
+            }
+        }
+    }
+}
+ 
+// Función para validar el número de entrada
+fun validar_numero_de_entrada(): Int {
+    var respuesta: String?
+    var respuesta_valida: Int?
+ 
+    println("Introduce un número entre 0 y 100: ")
+ 
+    while (true) {
+        // Leemos la entrada del usuario
+        respuesta = readlnOrNull()
+ 
+        // Validamos que la respuesta no sea nula
+        if (respuesta == null) {
+            println("No sé qué intentas hacer, por favor vuelve a intentarlo.")
+            continue
+        }
+ 
+        // Intentamos convertir la respuesta en un número entero
+        respuesta_valida = respuesta.toIntOrNull()
+ 
+        // Si la respuesta no es un número válido, pedimos que lo intente de nuevo
+        if (respuesta_valida == null) {
+            println("Eso que introdujo no lo puedo leer como número, por favor intente con los caracteres 1, 2, 3.")
+        } else if (respuesta_valida !in 0..100) {
+            // Validamos que el número esté en el rango de 0 a 100
+            println("El número debe estar entre 0 y 100. Intenta de nuevo.")
+        } else {
+            // Si el número es válido, lo retornamos
+            return respuesta_valida
+        }
+    }
+}
